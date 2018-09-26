@@ -74,8 +74,21 @@ export RUBYOPT="-r rubygems"
 
 # export ATOM_NODE_URL=http://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dist
 
-export WORKON_HOME=~/Envs
-source /usr/local/bin/virtualenvwrapper.sh
+###############################################################################
+# Kubernetes
+###############################################################################
+#alias kubens="kubectl config set-context $(kubectl config current-context) --namespace"
 
-alias kubens="kubectl config set-context $(kubectl config current-context) --namespace"
-alias gconfig="gcloud config configurations"
+###############################################################################
+# GCP
+###############################################################################
+#alias gconfig="gcloud config configurations"
+
+###############################################################################
+# PYTHON
+###############################################################################
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+
+source /usr/local/bin/virtualenvwrapper.sh
+export WORKON_HOME=$HOME/.venv
